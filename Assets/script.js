@@ -19,7 +19,7 @@ function randomItem(list) {
   return list[randomInt(list.length)];
 }
 
-function password() {
+function generatePassword() {
   let userInput = window.prompt("How many text characters do you want in your password?");
   const passwordLength = parseInt(userInput);
 
@@ -74,10 +74,9 @@ function password() {
 
 
 function writePassword() {
-  let password = password();
   let passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = generatePassword();
 
 }
 
